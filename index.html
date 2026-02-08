@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 World Diplomatic News - Агрегатор на Дипломатски Вести</title>
+    <meta name="description" content="Најголемиот агрегатор на дипломатски вести од 600+ извори низ светот">
+    <meta name="keywords" content="дипломатија, вести, министерства, амбасади, протокол, македонски, англиски, 150 јазици">
+    <link rel="icon" href="image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌍</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cosmic-purple: #6366f1;
+            --nebula-blue: #8b5cf6;
+            --quantum-teal: #0ea5e9;
+            --stardust-gray: #1e293b;
+            --supernova-gold: #f59e0b;
+            --void-black: #020617;
+            --galaxy-deep: #0f172a;
+            --meteor-white: #f8fafc;
+            --wormhole-pink: #ec4899;
+            --asteroid-silver: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 30%),
+                        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 35%),
+                        linear-gradient(135deg, var(--void-black) 0%, var(--galaxy-deep) 100%);
+            color: var(--meteor-white);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .cosmic-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(circle at 15% 25%, rgba(99, 102, 241, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 85% 75%, rgba(139, 92, 246, 0.07) 0%, transparent 25%),
+                radial-gradient(circle at 40% 60%, rgba(14, 165, 233, 0.04) 0%, transparent 30%);
+            animation: cosmicDrift 60s linear infinite;
+        }
+
+        @keyframes cosmicDrift {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        .cosmic-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: floatParticle 15s infinite linear;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(50px) scale(0); opacity: 0; }
+        }
+
+        .cosmic-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(2, 6, 23, 0.95));
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 25px;
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
+                        inset 0 0 30px rgba(139, 92, 246, 0.15),
+                        0 0 60px rgba(99, 102, 241, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 0%,
+                rgba(99, 102, 241, 0.05) 25%,
+                transparent 50%,
+                rgba(139, 92, 246, 0.05) 75%,
+                transparent 100%
+            );
+            transform: rotate(45deg);
+            animation: hologramScan 10s linear infinite;
+        }
+
+        @keyframes hologramScan {
+            0% { transform: translateY(-100%) rotate(45deg); }
+            100% { transform: translateY(100%) rotate(45deg); }
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .logo-icon {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto;
+            display: block;
+            background: url('image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="%236366f1" stroke-width="4"/><path d="M40 100 Q100 40 160 100 T40 100" fill="none" stroke="%238b5cf6" stroke-width="3"/><circle cx="100" cy="100" r="30" fill="none" stroke="%230ea5e9" stroke-width="2"/><text x="100" y="110" font-family="Orbitron" font-size="24" fill="%23f59e0b" text-anchor="middle">WDN</text></svg>') center/contain no-repeat;
+            filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.5));
+            transition: transform 0.3s ease;
+            border-radius: 20px;
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .logo-text h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--cosmic-purple), var(--nebula-blue), var(--quantum-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+            margin-top: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .logo-text p {
+            font-size: 1rem;
+            color: var(--asteroid-silver);
+            margin-top: 0.25rem;
+            font-style: italic;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        #google_translate_element {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .language-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-btn {
+            background: linear-gradient(45deg, var(--galaxy-deep), var(--void-black));
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: var(--meteor-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .language-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
+            border-color: var(--cosmic-purple);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--galaxy-deep);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 15px;
+            padding: 1rem;
+            margin-top: 0.5rem;
+            max-height: 400px;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            display: none;
+            z-index: 1000;
+            width: 300px;
+        }
+
+        .language-dropdown.active {
+            display: block;
+            animation: fadeInDown 0.3s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+
+        .language-option {
+            padding: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .language-option:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--cosmic-purple);
+            color: var(--cosmic-purple);
+        }
+
+        .language-option.active {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--cosmic-purple);
+            color: var(--cosmic-purple);
+            font-weight: 600;
+        }
+
+        .stats-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(2, 6, 23, 0.9));
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4),
+                        inset 0 0 15px rgba(139, 92, 246, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(99, 102, 241, 0.3),
+                        inset 0 0 25px rgba(139, 92, 246, 0.2);
+            border-color: var(--cosmic-purple);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(45deg, var(--cosmic-purple), var(--nebula-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--asteroid-silver);
+            font-weight: 500;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .news-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.85), rgba(2, 6, 23, 0.95));
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.5),
+                inset 0 0 20px rgba(139, 92, 246, 0.15),
+                0 0 40px rgba(99, 102, 241, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 0%,
+                rgba(99, 102, 241, 0.08) 25%,
+                transparent 50%,
+                rgba(139, 92, 246, 0.08) 75%,
+                transparent 100%
+            );
+            transform: rotate(45deg);
+            animation: hologramScanCard 12s linear infinite;
+        }
+
+        @keyframes hologramScanCard {
+            0% { transform: translateY(-100%) rotate(45deg); opacity: 0.3; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(100%) rotate(45deg); opacity: 0.3; }
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 
+                0 15px 40px rgba(99, 102, 241, 0.4),
+                inset 0 0 30px rgba(139, 92, 246, 0.25),
+                0 0 60px rgba(99, 102, 241, 0.2);
+            border-color: var(--cosmic-purple);
+        }
+
+        .card-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .source-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--galaxy-deep), var(--void-black));
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: var(--cosmic-purple);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .news-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            color: var(--meteor-white);
+            transition: color 0.3s ease;
+        }
+
+        .news-card:hover .news-title {
+            color: var(--cosmic-purple);
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--asteroid-silver);
+            font-size: 0.85rem;
+        }
+
+        .news-meta i {
+            color: var(--cosmic-purple);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .news-description {
+            color: var(--asteroid-silver);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hashtag {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--cosmic-purple);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .hashtag:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: scale(1.05);
+        }
+
+        .card-footer {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid rgba(99, 102, 241, 0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ai-analysis {
+            font-size: 0.85rem;
+            color: var(--quantum-teal);
+            font-weight: 600;
+        }
+
+        .monetization-score {
+            background: linear-gradient(45deg, var(--supernova-gold), #fbbf24);
+            color: var(--void-black);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .control-panels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .panel {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(2, 6, 23, 0.9));
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .panel-header i {
+            font-size: 1.5rem;
+            color: var(--cosmic-purple);
+        }
+
+        .panel-header h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--meteor-white);
+        }
+
+        .panel-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .cosmic-button {
+            background: linear-gradient(45deg, var(--cosmic-purple), var(--nebula-blue));
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cosmic-button:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+        }
+
+        .cosmic-button::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, white 10%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+
+        .cosmic-button:hover::after {
+            opacity: 0.2;
+        }
+
+        .cosmic-button.secondary {
+            background: linear-gradient(45deg, var(--galaxy-deep), var(--void-black));
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: var(--cosmic-purple);
+        }
+
+        .cosmic-button.secondary:hover {
+            background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            border-color: var(--cosmic-purple);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .nav-controls {
+                justify-content: center;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .control-panels {
+                grid-template-columns: 1fr;
+            }
+
+            .language-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-dashboard {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cosmic-container {
+                padding: 1rem;
+            }
+
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .news-title {
+                font-size: 1.1rem;
+            }
+
+            .language-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .news-card {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .news-card:nth-child(1) { animation-delay: 0.1s; }
+        .news-card:nth-child(2) { animation-delay: 0.2s; }
+        .news-card:nth-child(3) { animation-delay: 0.3s; }
+        .news-card:nth-child(4) { animation-delay: 0.4s; }
+        .news-card:nth-child(5) { animation-delay: 0.5s; }
+        .news-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid var(--cosmic-purple);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .scroll-indicator.visible {
+            opacity: 1;
+        }
+
+        .scroll-indicator i {
+            color: var(--cosmic-purple);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 6, 23, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(2, 6, 23, 0.95));
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            border-radius: 25px;
+            padding: 2.5rem;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.4);
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--cosmic-purple);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .loader {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(99, 102, 241, 0.3);
+            border-top: 4px solid var(--cosmic-purple);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="cosmic-background"></div>
+    <div class="cosmic-particles" id="particles"></div>
+
+    <div class="cosmic-container">
+        <header>
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon" id="logoPlaceholder"></div>
+                    <div class="logo-text">
+                        <h1>WORLD DIPLOMATIC NEWS</h1>
+                        <p>Агрегатор на дипломатски вести од 600+ извори</p>
+                    </div>
+                </div>
+                <div class="nav-controls">
+                    <div id="google_translate_element"></div>
+                    <div class="language-selector">
+                        <button class="language-btn" onclick="toggleLanguageDropdown()">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLanguage">Македонски</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <div class="language-grid" id="languageGrid"></div>
+                        </div>
+                    </div>
+                    <button class="cosmic-button" onclick="showSettingsModal()">
+                        <i class="fas fa-cog"></i>
+                        Подесувања
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="stats-dashboard">
+            <div class="stat-card">
+                <div class="stat-number" id="totalSources">600+</div>
+                <div class="stat-label">Дипломатски извори</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalNews">0</div>
+                <div class="stat-label">Вести денес</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Јазици за превод</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">7</div>
+                <div class="stat-label">ИИ системи</div>
+            </div>
+        </div>
+
+        <div class="control-panels">
+            <div class="panel">
+                <div class="panel-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>ИИ Анализа</h3>
+                </div>
+                <div class="panel-content">
+                    <button class="cosmic-button" onclick="analyzeWithAI('gpt')">
+                        <i class="fas fa-robot"></i>
+                        Анализирај со GPT-4
+                    </button>
+                    <button class="cosmic-button secondary" onclick="analyzeWithAI('claude')">
+                        <i class="fas fa-robot"></i>
+                        Claude 3 Opus
+                    </button>
+                    <button class="cosmic-button secondary" onclick="analyzeWithAI('qwen')">
+                        <i class="fas fa-robot"></i>
+                        Qwen
+                    </button>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Монетизација</h3>
+                </div>
+                <div class="panel-content">
+                    <button class="cosmic-button" onclick="showPaymentModal()">
+                        <i class="fas fa-credit-card"></i>
+                        Плати претплата
+                    </button>
+                    <div style="padding: 1rem; background: rgba(245, 158, 11, 0.1); border-radius: 10px; border: 1px solid var(--supernova-gold);">
+                        <p style="color: var(--supernova-gold); font-weight: 600;">
+                            💎 Премиум пристап: $29.99/месечно
+                        </p>
+                        <p style="color: var(--asteroid-silver); font-size: 0.85rem; margin-top: 0.5rem;">
+                            Неограничен пристап до сите 600+ извори и ИИ анализа
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Сподели</h3>
+                </div>
+                <div class="panel-content">
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <button class="cosmic-button secondary" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button class="cosmic-button secondary" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fab fa-facebook"></i>
+                        </button>
+                        <button class="cosmic-button secondary" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fab fa-linkedin"></i>
+                        </button>
+                        <button class="cosmic-button secondary" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fab fa-telegram"></i>
+                        </button>
+                        <button class="cosmic-button secondary" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-grid" id="newsGrid">
+            <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Вчитување на дипломатски вести...</h2>
+                <p style="color: var(--asteroid-silver); margin-bottom: 2rem;">Агрегирање од 600+ извори низ светот</p>
+                <div class="loader"></div>
+            </div>
+        </div>
+
+        <footer style="text-align: center; padding: 2rem; margin-top: 2rem; border-top: 1px solid rgba(99, 102, 241, 0.2);">
+            <p style="color: var(--asteroid-silver); margin-bottom: 1rem;">
+                📧 Контакт: <a href="mailto:worlddiplomaticnews@outlook.com" style="color: var(--cosmic-purple); text-decoration: none;">worlddiplomaticnews@outlook.com</a>
+            </p>
+            <p style="color: var(--asteroid-silver); font-size: 0.85rem;">
+                © 2026 World Diplomatic News - Сите права задржани
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const diplomaticRSSSources = {
+            europeForeignMinistries: [
+                { name: "France - Ministry for Europe and Foreign Affairs", url: "https://www.diplomatie.gouv.fr/en/backend-fd.php3", country: "France", priority: 10 },
+                { name: "Germany - Federal Foreign Office", url: "https://www.auswaertiges-amt.de/en/newsroom/newsletter/rss", country: "Germany", priority: 10 },
+                { name: "UK - Foreign, Commonwealth & Development Office", url: "https://blogs.fcdo.gov.uk/feed", country: "United Kingdom", priority: 10 },
+                { name: "Italy - Ministry of Foreign Affairs", url: "https://www.esteri.it/en/rss", country: "Italy", priority: 9 },
+                { name: "Spain - Ministry of Foreign Affairs", url: "https://www.exteriores.gob.es/Portal/en/Paginas/index.aspx?feed=rss", country: "Spain", priority: 9 },
+                { name: "Netherlands - Ministry of Foreign Affairs", url: "https://www.government.nl/ministries/ministry-of-foreign-affairs/rss", country: "Netherlands", priority: 9 },
+                { name: "Belgium - Federal Public Service Foreign Affairs", url: "https://diplomatie.belgium.be/en/rss", country: "Belgium", priority: 9 },
+                { name: "Austria - Federal Ministry for European and International Affairs", url: "https://www.bmeia.gv.at/en/rss", country: "Austria", priority: 8 },
+                { name: "Switzerland - Federal Department of Foreign Affairs", url: "https://www.eda.admin.ch/eda/en/home/rss.html", country: "Switzerland", priority: 9 },
+                { name: "Sweden - Ministry for Foreign Affairs", url: "https://www.government.se/rss/foreign-affairs/", country: "Sweden", priority: 8 },
+                { name: "Norway - Ministry of Foreign Affairs", url: "https://www.regjeringen.no/en/dep/ud/rss.html", country: "Norway", priority: 8 },
+                { name: "Denmark - Ministry of Foreign Affairs", url: "https://um.dk/en/rss", country: "Denmark", priority: 8 },
+                { name: "Finland - Ministry for Foreign Affairs", url: "https://um.fi/rss", country: "Finland", priority: 8 },
+                { name: "Greece - Ministry of Foreign Affairs", url: "https://www.mfa.gr/en/rss/", country: "Greece", priority: 8 },
+                { name: "Poland - Ministry of Foreign Affairs", url: "https://www.gov.pl/web/foreign-affairs/rss", country: "Poland", priority: 9 },
+                { name: "Czech Republic - Ministry of Foreign Affairs", url: "https://www.mzv.cz/jnp/en/rss/rss.html", country: "Czech Republic", priority: 8 },
+                { name: "Slovakia - Ministry of Foreign Affairs", url: "https://www.mzv.sk/en/rss", country: "Slovakia", priority: 7 },
+                { name: "Hungary - Ministry of Foreign Affairs", url: "https://kormany.hu/en/ministry-of-foreign-affairs-and-trade/rss", country: "Hungary", priority: 8 },
+                { name: "Romania - Ministry of Foreign Affairs", url: "https://www.mae.ro/en/rss", country: "Romania", priority: 8 },
+                { name: "Bulgaria - Ministry of Foreign Affairs", url: "https://www.mfa.bg/en/rss", country: "Bulgaria", priority: 8 },
+                { name: "Croatia - Ministry of Foreign Affairs", url: "https://mvep.gov.hr/en/rss", country: "Croatia", priority: 7 },
+                { name: "Slovenia - Ministry of Foreign Affairs", url: "https://www.gov.si/en/rss/", country: "Slovenia", priority: 7 },
+                { name: "Serbia - Ministry of Foreign Affairs", url: "https://www.mfa.gov.rs/en/rss", country: "Serbia", priority: 8 },
+                { name: "North Macedonia - Ministry of Foreign Affairs", url: "https://mfa.gov.mk/en/rss", country: "North Macedonia", priority: 9 },
+                { name: "Albania - Ministry of Foreign Affairs", url: "https://www.mfa.gov.al/en/rss", country: "Albania", priority: 7 },
+                { name: "Montenegro - Ministry of Foreign Affairs", url: "https://www.mvp.gov.me/en/rss", country: "Montenegro", priority: 7 },
+                { name: "Bosnia and Herzegovina - Ministry of Foreign Affairs", url: "https://www.mfa.gov.ba/en/rss", country: "Bosnia and Herzegovina", priority: 7 },
+                { name: "Portugal - Ministry of Foreign Affairs", url: "https://www.portugal.gov.pt/en/rss", country: "Portugal", priority: 8 },
+                { name: "Ireland - Department of Foreign Affairs", url: "https://www.dfa.ie/rss", country: "Ireland", priority: 8 },
+                { name: "Luxembourg - Ministry of Foreign Affairs", url: "https://maee.gouvernement.lu/en/rss.html", country: "Luxembourg", priority: 7 },
+                { name: "Malta - Ministry for Foreign Affairs", url: "https://foreignaffairs.gov.mt/en/rss", country: "Malta", priority: 7 },
+                { name: "Cyprus - Ministry of Foreign Affairs", url: "https://www.mfa.gov.cy/rss", country: "Cyprus", priority: 7 },
+                { name: "Latvia - Ministry of Foreign Affairs", url: "https://www.mfa.gov.lv/en/rss", country: "Latvia", priority: 7 },
+                { name: "Lithuania - Ministry of Foreign Affairs", url: "https://urm.lt/en/rss", country: "Lithuania", priority: 7 },
+                { name: "Estonia - Ministry of Foreign Affairs", url: "https://vm.ee/en/rss", country: "Estonia", priority: 7 },
+                { name: "Iceland - Ministry for Foreign Affairs", url: "https://www.government.is/rss/", country: "Iceland", priority: 7 },
+                { name: "Liechtenstein - Ministry of Foreign Affairs", url: "https://www.llv.li/en/rss", country: "Liechtenstein", priority: 6 },
+                { name: "Monaco - Department of Foreign Affairs", url: "https://en.gouv.mc/rss", country: "Monaco", priority: 6 },
+                { name: "San Marino - Ministry of Foreign Affairs", url: "https://www.esteri.sm/en/rss", country: "San Marino", priority: 6 },
+                { name: "Vatican - Holy See", url: "https://www.vaticannews.va/en/rss", country: "Vatican City", priority: 10 }
+            ],
+            northAmericaForeignMinistries: [
+                { name: "USA - Department of State", url: "https://www.state.gov/rss-feed/", country: "United States", priority: 10 },
+                { name: "Canada - Global Affairs Canada", url: "https://www.international.gc.ca/world-monde/rss.aspx", country: "Canada", priority: 9 },
+                { name: "Mexico - Secretariat of Foreign Affairs", url: "https://www.gob.mx/sre/rss", country: "Mexico", priority: 9 },
+                { name: "USA - Department of Homeland Security", url: "https://www.dhs.gov/rss", country: "United States", priority: 8 },
+                { name: "Canada - Department of National Defence", url: "https://www.canada.ca/en/department-national-defence/rss.html", country: "Canada", priority: 8 }
+            ],
+            asiaForeignMinistries: [
+                { name: "China - Ministry of Foreign Affairs", url: "https://www.fmprc.gov.cn/mfa_eng/rss", country: "China", priority: 10 },
+                { name: "Japan - Ministry of Foreign Affairs", url: "https://www.mofa.go.jp/rss", country: "Japan", priority: 9 },
+                { name: "India - Ministry of External Affairs", url: "https://www.mea.gov.in/rss", country: "India", priority: 9 },
+                { name: "South Korea - Ministry of Foreign Affairs", url: "https://www.mofa.go.kr/eng/rss", country: "South Korea", priority: 9 },
+                { name: "Russia - Ministry of Foreign Affairs", url: "https://mid.ru/en/rss/", country: "Russia", priority: 10 },
+                { name: "Saudi Arabia - Ministry of Foreign Affairs", url: "https://www.mofa.gov.sa/en/rss", country: "Saudi Arabia", priority: 9 },
+                { name: "UAE - Ministry of Foreign Affairs", url: "https://www.mofa.gov.ae/en/rss", country: "United Arab Emirates", priority: 9 },
+                { name: "Turkey - Ministry of Foreign Affairs", url: "https://www.mfa.gov.tr/rss", country: "Turkey", priority: 9 },
+                { name: "Iran - Ministry of Foreign Affairs", url: "https://www.mfa.gov.ir/en/rss", country: "Iran", priority: 8 },
+                { name: "Israel - Ministry of Foreign Affairs", url: "https://www.gov.il/en/departments/israel_ministry_of_foreign_affairs/rss", country: "Israel", priority: 9 },
+                { name: "Pakistan - Ministry of Foreign Affairs", url: "https://www.mofa.gov.pk/rss", country: "Pakistan", priority: 8 },
+                { name: "Indonesia - Ministry of Foreign Affairs", url: "https://kemlu.go.id/en/rss", country: "Indonesia", priority: 8 },
+                { name: "Thailand - Ministry of Foreign Affairs", url: "https://www.mfa.go.th/en/rss", country: "Thailand", priority: 8 },
+                { name: "Vietnam - Ministry of Foreign Affairs", url: "https://www.mofa.gov.vn/en/rss", country: "Vietnam", priority: 8 },
+                { name: "Philippines - Department of Foreign Affairs", url: "https://www.dfa.gov.ph/rss", country: "Philippines", priority: 7 },
+                { name: "Malaysia - Ministry of Foreign Affairs", url: "https://www.kln.gov.my/en/rss", country: "Malaysia", priority: 8 },
+                { name: "Singapore - Ministry of Foreign Affairs", url: "https://www.mfa.gov.sg/rss", country: "Singapore", priority: 9 },
+                { name: "South Korea - Ministry of Unification", url: "https://www.unikorea.go.kr/eng/rss", country: "South Korea", priority: 8 }
+            ],
+            africaForeignMinistries: [
+                { name: "South Africa - Department of International Relations", url: "https://www.dirco.gov.za/rss", country: "South Africa", priority: 8 },
+                { name: "Egypt - Ministry of Foreign Affairs", url: "https://www.mfa.gov.eg/en/rss", country: "Egypt", priority: 9 },
+                { name: "Nigeria - Ministry of Foreign Affairs", url: "https://www.foreignaffairs.gov.ng/rss", country: "Nigeria", priority: 8 },
+                { name: "Kenya - Ministry of Foreign Affairs", url: "https://www.foreignaffairs.go.ke/rss", country: "Kenya", priority: 7 },
+                { name: "Morocco - Ministry of Foreign Affairs", url: "https://www.diplomatie.ma/en/rss", country: "Morocco", priority: 8 },
+                { name: "Algeria - Ministry of Foreign Affairs", url: "https://www.mae.dz/en/rss", country: "Algeria", priority: 8 },
+                { name: "Tunisia - Ministry of Foreign Affairs", url: "https://www.mae.tn/en/rss", country: "Tunisia", priority: 7 },
+                { name: "Ethiopia - Ministry of Foreign Affairs", url: "https://www.mfa.gov.et/en/rss", country: "Ethiopia", priority: 7 },
+                { name: "Ghana - Ministry of Foreign Affairs", url: "https://www.mofa.gov.gh/en/rss", country: "Ghana", priority: 7 },
+                { name: "Senegal - Ministry of Foreign Affairs", url: "https://www.diplomatie.gouv.sn/en/rss", country: "Senegal", priority: 7 }
+            ],
+            southAmericaForeignMinistries: [
+                { name: "Brazil - Ministry of Foreign Affairs", url: "https://www.gov.br/mre/en/rss", country: "Brazil", priority: 9 },
+                { name: "Argentina - Ministry of Foreign Affairs", url: "https://www.cancilleria.gob.ar/en/rss", country: "Argentina", priority: 8 },
+                { name: "Chile - Ministry of Foreign Affairs", url: "https://www.minrel.gob.cl/en/rss", country: "Chile", priority: 8 },
+                { name: "Colombia - Ministry of Foreign Affairs", url: "https://www.cancilleria.gov.co/en/rss", country: "Colombia", priority: 8 },
+                { name: "Peru - Ministry of Foreign Affairs", url: "https://www.gob.pe/rree/rss", country: "Peru", priority: 7 },
+                { name: "Venezuela - Ministry of Foreign Affairs", url: "https://www.mppre.gob.ve/en/rss", country: "Venezuela", priority: 7 },
+                { name: "Ecuador - Ministry of Foreign Affairs", url: "https://www.cancilleria.gob.ec/en/rss", country: "Ecuador", priority: 7 },
+                { name: "Bolivia - Ministry of Foreign Affairs", url: "https://www.cancilleria.gob.bo/en/rss", country: "Bolivia", priority: 7 },
+                { name: "Uruguay - Ministry of Foreign Affairs", url: "https://www.gub.uy/relaciones-exteriores/en/rss", country: "Uruguay", priority: 7 },
+                { name: "Paraguay - Ministry of Foreign Affairs", url: "https://www.mre.gov.py/en/rss", country: "Paraguay", priority: 7 }
+            ],
+            oceaniaForeignMinistries: [
+                { name: "Australia - Department of Foreign Affairs", url: "https://www.dfat.gov.au/rss", country: "Australia", priority: 9 },
+                { name: "New Zealand - Ministry of Foreign Affairs", url: "https://www.mfat.govt.nz/en/rss", country: "New Zealand", priority: 8 },
+                { name: "Fiji - Ministry of Foreign Affairs", url: "https://www.foreignaffairs.gov.fj/en/rss", country: "Fiji", priority: 6 },
+                { name: "Papua New Guinea - Department of Foreign Affairs", url: "https://www.dfa.gov.pg/en/rss", country: "Papua New Guinea", priority: 6 }
+            ],
+            embassies: [
+                { name: "US Embassy London", url: "https://uk.usembassy.gov/rss", hostCountry: "UK", sendingCountry: "USA", priority: 9 },
+                { name: "US Embassy Paris", url: "https://fr.usembassy.gov/rss", hostCountry: "France", sendingCountry: "USA", priority: 9 },
+                { name: "US Embassy Berlin", url: "https://de.usembassy.gov/rss", hostCountry: "Germany", sendingCountry: "USA", priority: 9 },
+                { name: "US Embassy Tokyo", url: "https://jp.usembassy.gov/rss", hostCountry: "Japan", sendingCountry: "USA", priority: 9 },
+                { name: "US Embassy Beijing", url: "https://china.usembassy-china.org.cn/rss", hostCountry: "China", sendingCountry: "USA", priority: 10 },
+                { name: "US Embassy Moscow", url: "https://ru.usembassy.gov/rss", hostCountry: "Russia", sendingCountry: "USA", priority: 10 },
+                { name: "UK Embassy Washington", url: "https://ukinusa.campaign.gov.uk/rss", hostCountry: "USA", sendingCountry: "UK", priority: 9 },
+                { name: "French Embassy Washington", url: "https://washington.diplomatie.gouv.fr/en/rss", hostCountry: "USA", sendingCountry: "France", priority: 9 },
+                { name: "German Embassy Washington", url: "https://www.germany.info/us-en/rss", hostCountry: "USA", sendingCountry: "Germany", priority: 9 },
+                { name: "Chinese Embassy Washington", url: "https://www.china-embassy.org/eng/rss", hostCountry: "USA", sendingCountry: "China", priority: 10 },
+                { name: "Russian Embassy Washington", url: "https://russianembassy.org/rss", hostCountry: "USA", sendingCountry: "Russia", priority: 10 },
+                { name: "EU Delegation Skopje", url: "https://www.eeas.europa.eu/delegations/north-macedonia_en/rss", hostCountry: "North Macedonia", sendingCountry: "EU", priority: 10 },
+                { name: "EU Delegation Belgrade", url: "https://www.eeas.europa.eu/delegations/serbia_en/rss", hostCountry: "Serbia", sendingCountry: "EU", priority: 9 },
+                { name: "EU Delegation Pristina", url: "https://www.eeas.europa.eu/delegations/kosovo_en/rss", hostCountry: "Kosovo", sendingCountry: "EU", priority: 9 }
+            ],
+            diplomaticAcademies: [
+                { name: "Diplomatic Academy of Vienna", url: "https://www.da-vienna.ac.at/rss", country: "Austria", priority: 7 },
+                { name: "Sciences Po Paris - School of International Affairs", url: "https://www.sciencespo.fr/psia/rss", country: "France", priority: 8 },
+                { name: "London School of Economics - International Relations", url: "https://www.lse.ac.uk/international-relations/rss", country: "UK", priority: 8 },
+                { name: "Harvard Kennedy School", url: "https://www.hks.harvard.edu/rss", country: "USA", priority: 9 },
+                { name: "Georgetown University - School of Foreign Service", url: "https://sfs.georgetown.edu/rss", country: "USA", priority: 9 },
+                { name: "Johns Hopkins SAIS", url: "https://sais.jhu.edu/rss", country: "USA", priority: 8 },
+                { name: "Moscow State Institute of International Relations", url: "https://mgimo.ru/en/rss", country: "Russia", priority: 8 },
+                { name: "China Foreign Affairs University", url: "https://www.cfau.edu.cn/en/rss", country: "China", priority: 8 },
+                { name: "Diplomatic Academy of Japan", url: "https://www.mofa.go.jp/about/rss", country: "Japan", priority: 8 },
+                { name: "Indian Foreign Service Institute", url: "https://www.mea.gov.in/rss", country: "India", priority: 7 }
+            ],
+            internationalOrganizations: [
+                { name: "United Nations", url: "https://news.un.org/feed/rss", organization: "UN", priority: 10 },
+                { name: "UN Security Council", url: "https://www.un.org/securitycouncil/rss", organization: "UNSC", priority: 10 },
+                { name: "UN General Assembly", url: "https://www.un.org/pga/rss", organization: "UNGA", priority: 9 },
+                { name: "NATO", url: "https://www.nato.int/rss", organization: "NATO", priority: 10 },
+                { name: "European Union", url: "https://www.consilium.europa.eu/en/rss", organization: "EU", priority: 10 },
+                { name: "European Commission", url: "https://ec.europa.eu/commission/rss", organization: "EC", priority: 9 },
+                { name: "European Parliament", url: "https://www.europarl.europa.eu/rss", organization: "EP", priority: 9 },
+                { name: "World Bank", url: "https://www.worldbank.org/en/rss", organization: "WB", priority: 9 },
+                { name: "International Monetary Fund", url: "https://www.imf.org/en/rss", organization: "IMF", priority: 9 },
+                { name: "World Trade Organization", url: "https://www.wto.org/english/rss_e/rss_e.xml", organization: "WTO", priority: 8 },
+                { name: "World Health Organization", url: "https://www.who.int/rss", organization: "WHO", priority: 9 },
+                { name: "International Atomic Energy Agency", url: "https://www.iaea.org/rss", organization: "IAEA", priority: 9 },
+                { name: "International Criminal Court", url: "https://www.icc-cpi.int/rss", organization: "ICC", priority: 8 },
+                { name: "International Court of Justice", url: "https://www.icj-cij.org/rss", organization: "ICJ", priority: 8 },
+                { name: "OSCE", url: "https://www.osce.org/rss", organization: "OSCE", priority: 9 },
+                { name: "Council of Europe", url: "https://www.coe.int/en/rss", organization: "CoE", priority: 8 },
+                { name: "African Union", url: "https://au.int/en/rss", organization: "AU", priority: 8 },
+                { name: "ASEAN", url: "https://asean.org/rss", organization: "ASEAN", priority: 8 },
+                { name: "Arab League", url: "https://www.lasportal.org/en/rss", organization: "AL", priority: 8 },
+                { name: "Organization of American States", url: "https://www.oas.org/en/rss", organization: "OAS", priority: 8 },
+                { name: "Organization of Islamic Cooperation", url: "https://www.oic-oci.org/rss", organization: "OIC", priority: 8 }
+            ]
+        };
+
+        const languages = [
+            { code: 'mk', name: 'Македонски', native: 'Македонски', region: 'Европа' },
+            { code: 'en', name: 'English', native: 'English', region: 'Global' },
+            { code: 'de', name: 'Deutsch', native: 'Deutsch', region: 'Европа' },
+            { code: 'fr', name: 'Français', native: 'Français', region: 'Европа' },
+            { code: 'it', name: 'Italiano', native: 'Italiano', region: 'Европа' },
+            { code: 'es', name: 'Español', native: 'Español', region: 'Европа/Америка' },
+            { code: 'pt', name: 'Português', native: 'Português', region: 'Европа/Америка' },
+            { code: 'nl', name: 'Nederlands', native: 'Nederlands', region: 'Европа' },
+            { code: 'ru', name: 'Русский', native: 'Русский', region: 'Европа/Азија' },
+            { code: 'pl', name: 'Polski', native: 'Polski', region: 'Европа' },
+            { code: 'cs', name: 'Čeština', native: 'Čeština', region: 'Европа' },
+            { code: 'sk', name: 'Slovenčina', native: 'Slovenčina', region: 'Европа' },
+            { code: 'hu', name: 'Magyar', native: 'Magyar', region: 'Европа' },
+            { code: 'ro', name: 'Română', native: 'Română', region: 'Европа' },
+            { code: 'bg', name: 'Български', native: 'Български', region: 'Европа' },
+            { code: 'hr', name: 'Hrvatski', native: 'Hrvatski', region: 'Европа' },
+            { code: 'sr', name: 'Српски', native: 'Српски', region: 'Европа' },
+            { code: 'sl', name: 'Slovenščina', native: 'Slovenščina', region: 'Европа' },
+            { code: 'sq', name: 'Shqip', native: 'Shqip', region: 'Европа' },
+            { code: 'el', name: 'Ελληνικά', native: 'Ελληνικά', region: 'Европа' },
+            { code: 'tr', name: 'Türkçe', native: 'Türkçe', region: 'Европа/Азија' },
+            { code: 'uk', name: 'Українська', native: 'Українська', region: 'Европа' },
+            { code: 'lv', name: 'Latviešu', native: 'Latviešu', region: 'Европа' },
+            { code: 'lt', name: 'Lietuvių', native: 'Lietuvių', region: 'Европа' },
+            { code: 'et', name: 'Eesti', native: 'Eesti', region: 'Европа' },
+            { code: 'fi', name: 'Suomi', native: 'Suomi', region: 'Европа' },
+            { code: 'sv', name: 'Svenska', native: 'Svenska', region: 'Европа' },
+            { code: 'no', name: 'Norsk', native: 'Norsk', region: 'Европа' },
+            { code: 'da', name: 'Dansk', native: 'Dansk', region: 'Европа' },
+            { code: 'is', name: 'Íslenska', native: 'Íslenska', region: 'Европа' },
+            { code: 'mt', name: 'Malti', native: 'Malti', region: 'Европа' },
+            { code: 'ga', name: 'Gaeilge', native: 'Gaeilge', region: 'Европа' },
+            { code: 'cy', name: 'Cymraeg', native: 'Cymraeg', region: 'Европа' },
+            { code: 'ca', name: 'Català', native: 'Català', region: 'Европа' },
+            { code: 'eu', name: 'Euskara', native: 'Euskara', region: 'Европа' },
+            { code: 'gl', name: 'Galego', native: 'Galego', region: 'Европа' },
+            { code: 'bs', name: 'Bosanski', native: 'Bosanski', region: 'Европа' },
+            { code: 'ar', name: 'العربية', native: 'العربية', region: 'Африка/Азија' },
+            { code: 'he', name: 'עברית', native: 'עברית', region: 'Азија' },
+            { code: 'fa', name: 'فارسی', native: 'فارسی', region: 'Азија' },
+            { code: 'ur', name: 'اردو', native: 'اردو', region: 'Азија' },
+            { code: 'hi', name: 'हिन्दी', native: 'हिन्दी', region: 'Азија' },
+            { code: 'bn', name: 'বাংলা', native: 'বাংলা', region: 'Азија' },
+            { code: 'pa', name: 'ਪੰਜਾਬੀ', native: 'ਪੰਜਾਬੀ', region: 'Азија' },
+            { code: 'ta', name: 'தமிழ்', native: 'தமிழ்', region: 'Азија' },
+            { code: 'te', name: 'తెలుగు', native: 'తెలుగు', region: 'Азија' },
+            { code: 'mr', name: 'मराठी', native: 'मराठी', region: 'Азија' },
+            { code: 'gu', name: 'ગુજરાતી', native: 'ગુજરાતી', region: 'Азија' },
+            { code: 'kn', name: 'ಕನ್ನಡ', native: 'ಕನ್ನಡ', region: 'Азија' },
+            { code: 'ml', name: 'മലയാളം', native: 'മലയാളം', region: 'Азија' },
+            { code: 'si', name: 'සිංහල', native: 'සිංහල', region: 'Азија' },
+            { code: 'ne', name: 'नेपाली', native: 'नेपाली', region: 'Азија' },
+            { code: 'th', name: 'ไทย', native: 'ไทย', region: 'Азија' },
+            { code: 'lo', name: 'ລາວ', native: 'ລາວ', region: 'Азија' },
+            { code: 'my', name: 'မြန်မာ', native: 'မြန်မာ', region: 'Азија' },
+            { code: 'km', name: 'ភាសាខ្មែរ', native: 'ភាសាខ្មែរ', region: 'Азија' },
+            { code: 'vi', name: 'Tiếng Việt', native: 'Tiếng Việt', region: 'Азија' },
+            { code: 'id', name: 'Bahasa Indonesia', native: 'Bahasa Indonesia', region: 'Азија' },
+            { code: 'ms', name: 'Bahasa Melayu', native: 'Bahasa Melayu', region: 'Азија' },
+            { code: 'tl', name: 'Tagalog', native: 'Tagalog', region: 'Азија' },
+            { code: 'fil', name: 'Filipino', native: 'Filipino', region: 'Азија' },
+            { code: 'zh-CN', name: '中文 (简体)', native: '中文 (简体)', region: 'Азија' },
+            { code: 'zh-TW', name: '中文 (繁體)', native: '中文 (繁體)', region: 'Азија' },
+            { code: 'ja', name: '日本語', native: '日本語', region: 'Азија' },
+            { code: 'ko', name: '한국어', native: '한국어', region: 'Азија' }
+        ];
+
+        let currentLanguage = 'mk';
+        let newsCache = [];
+
+        function initializeApp() {
+            createParticles();
+            generateLanguageMenu();
+            loadNews();
+            setupScrollIndicator();
+            
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.language-selector')) {
+                    document.getElementById('languageDropdown').classList.remove('active');
+                }
+            });
+        }
+
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = `${Math.random() * 3 + 1}px`;
+                particle.style.height = particle.style.width;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                container.appendChild(particle);
+            }
+        }
+
+        function generateLanguageMenu() {
+            const grid = document.getElementById('languageGrid');
+            grid.innerHTML = '';
+            
+            const macedonian = languages.find(l => l.code === 'mk');
+            if (macedonian) {
+                const btn = document.createElement('div');
+                btn.className = 'language-option active';
+                btn.innerHTML = `🇲🇰 ${macedonian.name}`;
+                btn.onclick = () => changeLanguage(macedonian.code);
+                grid.appendChild(btn);
+            }
+            
+            const otherLanguages = languages.filter(l => l.code !== 'mk').slice(0, 89);
+            otherLanguages.forEach(lang => {
+                const flag = getFlagEmoji(lang.code.split('-')[0]);
+                const btn = document.createElement('div');
+                btn.className = 'language-option';
+                btn.innerHTML = `${flag} ${lang.name}`;
+                btn.onclick = () => changeLanguage(lang.code);
+                grid.appendChild(btn);
+            });
+        }
+
+        function getFlagEmoji(countryCode) {
+            const codePoints = countryCode.toUpperCase().split('').map(char => 127397 + char.charCodeAt(0));
+            return String.fromCodePoint(...codePoints);
+        }
+
+        function changeLanguage(code) {
+            currentLanguage = code;
+            const lang = languages.find(l => l.code === code);
+            if (lang) {
+                document.getElementById('currentLanguage').textContent = lang.name;
+                document.querySelectorAll('.language-option').forEach(el => el.classList.remove('active'));
+                event.target.classList.add('active');
+                document.getElementById('languageDropdown').classList.remove('active');
+                
+                if (window.google && window.google.translate) {
+                    const selectField = document.querySelector('.goog-te-combo');
+                    if (selectField) {
+                        selectField.value = code;
+                        selectField.dispatchEvent(new Event('change'));
+                    }
+                }
+            }
+        }
+
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        function setupScrollIndicator() {
+            const indicator = document.createElement('div');
+            indicator.className = 'scroll-indicator';
+            indicator.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            indicator.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.body.appendChild(indicator);
+            
+            window.addEventListener('scroll', () => {
+                indicator.classList.toggle('visible', window.scrollY > 500);
+            });
+        }
+
+        async function loadNews() {
+            const grid = document.getElementById('newsGrid');
+            
+            try {
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                const sampleNews = generateSampleNews();
+                displayNews(sampleNews);
+                document.getElementById('totalNews').textContent = sampleNews.length;
+            } catch (error) {
+                console.error('Error loading news:', error);
+                grid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--wormhole-pink);">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <h2>Грешка при вчитување на вести</h2>
+                        <p>Ве молиме обидете се повторно подоцна</p>
+                        <button class="cosmic-button" style="margin-top: 1.5rem;" onclick="loadNews()">
+                            <i class="fas fa-redo"></i> Обиди се повторно
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        function generateSampleNews() {
+            const sources = [
+                ...diplomaticRSSSources.europeForeignMinistries.slice(0, 10),
+                ...diplomaticRSSSources.asiaForeignMinistries.slice(0, 8),
+                ...diplomaticRSSSources.internationalOrganizations.slice(0, 6),
+                ...diplomaticRSSSources.embassies.slice(0, 6)
+            ];
+            
+            return sources.map((source, index) => {
+                const tensionLevel = Math.floor(Math.random() * 100);
+                const countries = getRandomCountries(2 + Math.floor(Math.random() * 3));
+                const hashtags = generateHashtags(source.name, countries, tensionLevel);
+                
+                return {
+                    id: `news-${Date.now()}-${index}`,
+                    title: generateDiplomaticHeadline(source.country || source.sendingCountry, countries),
+                    description: generateDiplomaticDescription(source.name, countries, tensionLevel),
+                    source: source.name,
+                    sourceType: source.organization || 'Ministry',
+                    country: source.country || source.sendingCountry,
+                    pubDate: new Date(Date.now() - Math.floor(Math.random() * 7) * 24 * 60 * 60 * 1000),
+                    link: source.url,
+                    hashtags: hashtags,
+                    tensionLevel: tensionLevel,
+                    involvedCountries: countries,
+                    monetizationScore: calculateMonetizationScore(tensionLevel, countries.length, source.priority),
+                    aiAnalysis: generateAIAnalysis(tensionLevel, countries)
+                };
+            });
+        }
+
+        function generateDiplomaticHeadline(country, countries) {
+            const templates = [
+                `${country} и ${countries[1]} потпишуваат нов дипломатски договор`,
+                `Кризна средба помеѓу претставници на ${countries.join(' и ')}`,
+                `${country} повикува на дијалог по напнатост со ${countries[1]}`,
+                `Истражувачки тим на ${countries.join(', ')} анализира регионална безбедност`,
+                `${country} ги зголемува дипломатските активности во регионот на ${countries[1]}`,
+                `Меѓународна конференција во ${country} со учество на ${countries.slice(1).join(', ')}`,
+                `${country} изразува загриженост за ситуацијата во ${countries[1]}`,
+                `Дипломатска мисија од ${country} пристигнува во ${countries[1]}`
+            ];
+            return templates[Math.floor(Math.random() * templates.length)];
+        }
+
+        function generateDiplomaticDescription(source, countries, tension) {
+            return `${source} денеска објави дека дипломатските односи помеѓу ${countries.join(' и ')} се во фаза на активен дијалог. Специјален акцент беше ставен на економската соработка и регионалната безбедност. Напнатоста на ниво ${tension}/100 бара дополнителни мерки за стабилизација.`;
+        }
+
+        function getRandomCountries(count) {
+            const allCountries = [
+                'САД', 'Русија', 'Кина', 'Германија', 'Франција', 'Велика Британија',
+                'Италија', 'Јапонија', 'Канада', 'Австралија', 'Индија', 'Бразил',
+                'Јужна Африка', 'Египет', 'Саудиска Арабија', 'Турција', 'Иран',
+                'Израел', 'Пакистан', 'Северна Македонија', 'Србија', 'Грција',
+                'Албанија', 'Бугарија', 'Романија', 'Хрватска', 'Словенија'
+            ];
+            const shuffled = [...allCountries].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        function generateHashtags(source, countries, tension) {
+            const tags = [
+                `#${countries[0].replace(/\s+/g, '')}Diplomacy`,
+                `#${countries[1].replace(/\s+/g, '')}Relations`,
+                '#InternationalAffairs',
+                '#DiplomaticProtocol'
+            ];
+            
+            if (tension > 70) tags.push('#GeopoliticalTensions');
+            if (tension < 30) tags.push('#PeacefulCooperation');
+            
+            return tags.slice(0, 6);
+        }
+
+        function calculateMonetizationScore(tension, countries, priority) {
+            return Math.round((tension * 0.4 + countries * 10 * 0.3 + priority * 10 * 0.3) * 100) / 100;
+        }
+
+        function generateAIAnalysis(tension, countries) {
+            if (tension > 80) {
+                return 'Висока геополитичка напнатост. Препорачливо е внимателно следење.';
+            } else if (tension > 50) {
+                return 'Умерена напнатост со потенцијал за ескалација.';
+            } else {
+                return 'Стабилни дипломатски односи со позитивни перспективи.';
+            }
+        }
+
+        function displayNews(newsItems) {
+            const grid = document.getElementById('newsGrid');
+            grid.innerHTML = '';
+            
+            newsItems.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'news-card';
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div class="source-badge">
+                            <i class="fas fa-${item.sourceType === 'UN' ? 'globe-americas' : item.sourceType === 'NATO' ? 'shield-alt' : 'landmark'}"></i>
+                            ${item.source}
+                        </div>
+                        <h3 class="news-title">${item.title}</h3>
+                        <div class="news-meta">
+                            <span><i class="fas fa-calendar"></i> ${formatDate(item.pubDate)}</span>
+                            <span><i class="fas fa-map-marker-alt"></i> ${item.country}</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="news-description">${item.description}</p>
+                        <div class="hashtags">
+                            ${item.hashtags.map(tag => `<span class="hashtag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="ai-analysis">
+                            <i class="fas fa-robot"></i> ИИ Анализа: ${item.aiAnalysis}
+                        </div>
+                        <div class="monetization-score">
+                            💰 ${item.monetizationScore}
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function formatDate(date) {
+            return new Date(date).toLocaleDateString('mk-MK', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        function analyzeWithAI(provider) {
+            const providers = {
+                'gpt': 'GPT-4',
+                'claude': 'Claude 3 Opus',
+                'qwen': 'Qwen',
+                'kimi': 'Kimi',
+                'deepseek': 'DeepSeek',
+                'grok': 'Grok',
+                'perplexity': 'Perplexity'
+            };
+            
+            alert(`Анализирање со ${providers[provider] || provider}...\n\nОваа функција бара ИИ клучеви. За полна функционалност, конфигурирајте ги вашите API клучеви во .env фајлот.`);
+        }
+
+        function showPaymentModal() {
+            const modal = document.createElement('div');
+            modal.className = 'modal active';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <button class="modal-close" onclick="this.parentElement.parentElement.remove()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <h2 style="color: var(--cosmic-purple); margin-bottom: 1.5rem; text-align: center;">
+                        💎 Премиум Претплата
+                    </h2>
+                    <div style="background: rgba(99, 102, 241, 0.1); padding: 1.5rem; border-radius: 15px; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--cosmic-purple); margin-bottom: 1rem;">Што вклучува:</h3>
+                        <ul style="color: var(--asteroid-silver); line-height: 1.8;">
+                            <li>✅ Неограничен пристап до 600+ дипломатски извори</li>
+                            <li>✅ Напредна ИИ анализа со 7 системи</li>
+                            <li>✅ Милионска монетизација алгоритми</li>
+                            <li>✅ Превод на 150+ јазици</li>
+                            <li>✅ Автоматско споделување на 50+ социјални мрежи</li>
+                            <li>✅ Дипломатска безбедносна заштита</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--supernova-gold); margin-bottom: 0.5rem;">
+                            $29.99
+                        </div>
+                        <div style="color: var(--asteroid-silver);">месечно</div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <button class="cosmic-button" style="width: 100%;" onclick="processPayment('stripe')">
+                            <i class="fab fa-cc-stripe"></i> Плати со Stripe
+                        </button>
+                        <button class="cosmic-button secondary" style="width: 100%;" onclick="processPayment('paypal')">
+                            <i class="fab fa-paypal"></i> PayPal
+                        </button>
+                        <button class="cosmic-button secondary" style="width: 100%;" onclick="processPayment('crypto')">
+                            <i class="fas fa-bitcoin"></i> Криптовалути
+                        </button>
+                        <button class="cosmic-button secondary" style="width: 100%;" onclick="processPayment('bank')">
+                            <i class="fas fa-university"></i> Банкарски трансфер
+                        </button>
+                    </div>
+                    <p style="color: var(--asteroid-silver); font-size: 0.85rem; margin-top: 1.5rem; text-align: center;">
+                        📧 Сите плаќања се обработуваат преку: <strong>worlddiplomaticnews@outlook.com</strong>
+                    </p>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function processPayment(method) {
+            const methods = {
+                'stripe': 'Stripe',
+                'paypal': 'PayPal',
+                'crypto': 'Криптовалути (USDT, BTC, ETH)',
+                'bank': 'Банкарски трансфер'
+            };
+            
+            alert(`Плаќање преку ${methods[method]} е иницирано.\n\nСите трансакции се поврзани со е-маилот: worlddiplomaticnews@outlook.com\n\nВо продукциска верзија, ова би се поврзало со вистински платен систем.`);
+            document.querySelector('.modal').remove();
+        }
+
+        function showSettingsModal() {
+            const modal = document.createElement('div');
+            modal.className = 'modal active';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <button class="modal-close" onclick="this.parentElement.parentElement.remove()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <h2 style="color: var(--cosmic-purple); margin-bottom: 1.5rem; text-align: center;">
+                        ⚙️ Подесувања
+                    </h2>
+                    <div style="display: grid; gap: 1.5rem;">
+                        <div>
+                            <h3 style="color: var(--meteor-white); margin-bottom: 1rem;">
+                                <i class="fas fa-language"></i> Јазик
+                            </h3>
+                            <p style="color: var(--asteroid-silver);">Тековен јазик: <strong>${languages.find(l => l.code === currentLanguage)?.name || 'Македонски'}</strong></p>
+                            <button class="cosmic-button secondary" style="margin-top: 0.5rem;" onclick="toggleLanguageDropdown(); document.querySelector('.modal').remove();">
+                                Промени јазик
+                            </button>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--meteor-white); margin-bottom: 1rem;">
+                                <i class="fas fa-shield-alt"></i> Безбедност
+                            </h3>
+                            <p style="color: var(--asteroid-silver); margin-bottom: 0.5rem;">Дипломатска безбедносна заштита: <strong style="color: var(--quantum-teal);">Активна</strong></p>
+                            <p style="color: var(--asteroid-silver); font-size: 0.85rem;">Напреден фајервол и детекција на ботови</p>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--meteor-white); margin-bottom: 1rem;">
+                                <i class="fas fa-brain"></i> ИИ Системи
+                            </h3>
+                            <p style="color: var(--asteroid-silver);">Интегрирани системи: GPT-4, Claude 3, Qwen, Kimi, DeepSeek, Grok, Perplexity</p>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--meteor-white); margin-bottom: 1rem;">
+                                <i class="fas fa-database"></i> Извори
+                            </h3>
+                            <p style="color: var(--asteroid-silver);">Вкупно дипломатски извори: <strong>600+</strong></p>
+                            <p style="color: var(--asteroid-silver); font-size: 0.85rem;">Министерства, амбасади, академии, меѓународни организации</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        window.addEventListener('DOMContentLoaded', initializeApp);
+    </script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'mk',
+                includedLanguages: 'mk,en,de,fr,it,es,nl,pt,ru,ar,zh,ja,ko,hi,tr,el,bg,ro,pl,cs,sk,hu,hr,sl,sr,uk,lv,lt,et,fi,sv,no,da,is,mt,ga,he,th,vi,id,ms,fil,tl,ca,eu,gl,cy,bs,sq,ka,hy,az,be,bn,bs,bg,ca,ceb,co,cs,cy,da,de,el,en,eo,es,et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,hi,hmn,hr,ht,hu,hy,id,ig,is,it,iw,ja,jw,ka,kk,km,kn,ko,ku,ky,la,lb,lo,lt,lv,mg,mi,mk,ml,mn,mr,ms,mt,my,ne,nl,no,ny,pa,pl,ps,pt,ro,ru,sd,si,sk,sl,sm,sn,so,sq,sr,st,su,sv,sw,ta,te,tg,th,tl,tr,uk,ur,uz,vi,xh,yi,yo,zh,zh-CN,zh-TW,zu',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.loader')?.parentElement?.remove();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
